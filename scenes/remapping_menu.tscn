@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://nhu2878jnb0j"]
+
+[ext_resource type="Script" path="res://scripts/input_remapping/InputButton.gd" id="1_c6q3a"]
+
+[node name="RemappingMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Window" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -278.0
+offset_top = -243.0
+offset_right = 278.0
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -6.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InputSet" type="HBoxContainer" parent="Window/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="InputName" type="RichTextLabel" parent="Window/ScrollContainer/VBoxContainer/InputSet"]
+custom_minimum_size = Vector2(0, 28.09)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Type
+"
+
+[node name="InputButton" type="Button" parent="Window/ScrollContainer/VBoxContainer/InputSet"]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+script = ExtResource("1_c6q3a")

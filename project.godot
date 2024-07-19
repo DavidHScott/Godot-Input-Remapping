@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Godot-input-remapping"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="Godot-input-remapping"
+
+[input]
+
+test={
+"deadzone": 0.5,
+"events": []
+}
